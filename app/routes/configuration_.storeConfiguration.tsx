@@ -8,6 +8,7 @@ import {
   TabPanels,
   Tabs,
   Text,
+  Box,
 } from '@chakra-ui/react';
 import type { ActionArgs, DataFunctionArgs } from '@remix-run/node';
 import { redirect } from '@remix-run/node';
@@ -242,7 +243,9 @@ export default function StoreConfiguration() {
                 <Text fontWeight={'bold'} fontSize={'16px'}>
                   Daftar Template Pesan
                 </Text>
-                <CreateButton storeId={data.store_id?.id} />
+                <Box>
+                  <CreateButton storeId={data.store_id?.id} />
+                </Box>
               </Flex>
               <Scroll>
                 <Stack spacing="2">
